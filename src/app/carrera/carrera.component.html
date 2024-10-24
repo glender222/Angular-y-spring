@@ -1,0 +1,26 @@
+<app-sidebar class=""></app-sidebar>
+
+<p-card header="Carrera">
+  <div class="Tabla">
+
+  <p-table [value]="carreras" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-carre>
+          <tr>
+              <td>{{ carre.code }}</td>
+              <td>{{ carre.name }}</td>
+              <td>{{ carre.category }}</td>
+              <td>{{ carre.quantity }}</td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>
+ 
+    </p-card>
