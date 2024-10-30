@@ -18,7 +18,7 @@ export const routes: Routes = [
     title:'Carrera'
   },{
     path:'**',
-    redirectTo:'**',
+    redirectTo:'',
     pathMatch:'full'
   }
 ];

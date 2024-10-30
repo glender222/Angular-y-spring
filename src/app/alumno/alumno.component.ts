@@ -6,20 +6,25 @@ import { PanelModule } from 'primeng/panel';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { Alumno } from './models/alumno';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-alumno',
   standalone: true,
-  imports: [SidebarComponent,CardModule, PanelModule,TableModule,CommonModule],
+  imports: [SidebarComponent,CardModule, PanelModule,TableModule,CommonModule, RouterModule],
   templateUrl: './alumno.component.html',
   styleUrl: './alumno.component.css'
 })
 export class AlumnoComponent {
-  alumnos!: Alumno[];
+  alumnos: Alumno[]=[];
 
   constructor(private alumnoService: AlumnoService) {}
-
   ngOnInit() {
-
+     this.listarAlumnos();
+    }
+    listarAlumnos(){
+      this.alumnoService.getAlumnos().subscribe((data)=>{
+          this.alumnos=data;
+      });
     }
   }

@@ -1,23 +1,25 @@
-<app-sidebar></app-sidebar>
 
-<p-card header="Alumno">
+<app-sidebar class=""></app-sidebar>
+
+<p-card header="Carrera">
   <div class="Tabla">
 
   <p-table [value]="alumnos" [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header">
           <tr>
-              <th>Code</th>
-              <th>Name</th>
-              <th>Category</th>
-              <th>Quantity</th>
+              <th>id</th>
+              <th>nombre</th>
+              <th>Estado</th>
+              <th>carrera</th>
+
           </tr>
       </ng-template>
-      <ng-template pTemplate="body" let-alumn>
+      <ng-template pTemplate="body" let-alum>
           <tr>
-              <td>{{ alumn.code }}</td>
-              <td>{{ alumn.name }}</td>
-              <td>{{ alumn.category }}</td>
-              <td>{{ alumn.quantity }}</td>
+              <td>{{ alum.id}}</td>
+              <td>{{ alum.nombre }}</td>
+              <td>{{ alum.apellido }}</td>
+              <td>{{ alum.carrera }}</td>
           </tr>
       </ng-template>
   </p-table>

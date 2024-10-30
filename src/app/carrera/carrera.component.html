@@ -6,18 +6,16 @@
   <p-table [value]="carreras" [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header">
           <tr>
-              <th>Code</th>
-              <th>Name</th>
-              <th>Category</th>
-              <th>Quantity</th>
+              <th>id</th>
+              <th>nombre</th>
+              <th>Estado</th>
           </tr>
       </ng-template>
       <ng-template pTemplate="body" let-carre>
           <tr>
-              <td>{{ carre.code }}</td>
-              <td>{{ carre.name }}</td>
-              <td>{{ carre.category }}</td>
-              <td>{{ carre.quantity }}</td>
+              <td>{{ carre.id}}</td>
+              <td>{{ carre.nombre }}</td>
+              <td>{{ carre.estado }}</td>
           </tr>
       </ng-template>
   </p-table>
